@@ -1,0 +1,100 @@
+/* gallery base layout */
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-content: stretch;
+  width: 100%;
+}
+
+/* gallery grid (padding base for mobile) */
+.gallery__grid {
+  flex: 1;
+  padding-block: 0.5rem 1rem;
+}
+
+@media (min-width: 480px) {
+  .gallery__grid {
+    padding-inline: 1rem; /* モバイル用 */
+  }
+}
+
+/* タブレット以上 */
+@media (min-width: 1201px) {
+  .gallery__grid {
+    padding-top: 1rem;
+    padding-inline: 2rem;
+  }
+}
+
+/* デスクトップ（フルHD〜） */
+@media (min-width: 1401px) {
+  .gallery__grid {
+    padding-inline: 5rem;
+  }
+}
+
+/* 4Kディスプレイなど */
+@media (min-width: 2560px) {
+  .gallery__grid {
+    padding-inline: 8rem;
+  }
+}
+
+
+
+/* image grid base layout for mobile */
+.gallery__grid-inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+}
+
+/* 小型タブレット以上 */
+@media (min-width: 480px) {
+  .gallery__grid-inner {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* タブレット横向きや小型ノートPC */
+@media (min-width: 768px) {
+  .gallery__grid-inner {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media screen and (max-width: 926px) and (orientation: landscape) {
+  .gallery__grid-inner {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+/* 標準ノートPC以上 */
+@media (min-width: 1024px) {
+  .gallery__grid-inner {
+    grid-template-columns: repeat(8, 1fr);
+  }
+}
+
+/* デスクトップ（大画面） */
+@media (min-width: 1440px) {
+  .gallery__grid-inner {
+    grid-template-columns: repeat(10, 1fr);
+  }
+}
+
+/* thumbnail image styling */
+.gallery__thumbnail {
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+  aspect-ratio: 1 / 1;
+  width: 100%;
+}
+/* ★★ */
+
+@media (any-hover: hover) {
+  .gallery__thumbnail:hover {
+    transform: scale(1.2);
+  }
+}

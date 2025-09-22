@@ -1,0 +1,39 @@
+.gallery-controls {
+  padding-block: 2.4rem;
+  color: #4b5563;
+}
+
+@media (min-width: 1200px) {
+  .gallery-controls {
+    padding-block: 3.2rem;
+  }
+}
+
+.gallery-controls__tag-info {
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+@media (min-width: 768px) {
+  .gallery-controls__tag-info {
+    font-size: inherit;
+  }
+}
+
+.gallery-controls__tag-info:not(:last-child) {
+  margin-bottom: 1.8rem;/* モバイル用（初期値） */
+}
+
+.gallery-controls__tag-value {
+  font-weight: bold;
+  color: #2563eb;
+}
+
+.gallery-controls__clear-button {
+  color: #ef4444;
+  margin: 0 auto;
+}
+
+.gallery-controls__load-button {
+  margin: 0 auto;
+}

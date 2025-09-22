@@ -1,0 +1,60 @@
+.tag-navigation {
+  padding-block: 1.5rem;
+  overflow: hidden;
+  margin-inline: 1rem;
+}
+
+/* タブレット以上 */
+@media (min-width: 1201px) {
+  .tag-navigation {
+    padding-inline: 2rem;
+  }
+}
+
+/* デスクトップ（フルHD〜） */
+@media (min-width: 1401px) {
+  .tag-navigation {
+    padding-inline: 5rem;
+  }
+}
+
+/* 4Kディスプレイなど */
+@media (min-width: 2560px) {
+  .tag-navigation {
+    padding-inline: 8rem;
+  }
+}
+
+.tag-navigation__inner {
+  white-space: nowrap;
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none; /* Safari 対応 */
+  -moz-user-select: none; /* Firefox 対応 */
+  -ms-user-select: none; /* IE 対応 */
+}
+.tag-navigation__inner::-webkit-scrollbar {
+  display: none;
+}
+
+.tag-navigation__list {
+  display: flex;
+  gap: 0 1rem; 
+}
+
+.tag-navigation__button {
+  background: #f3f4f6; /* bg-gray-100 */
+  padding: 0.5rem 1rem;
+  border-radius: 20px; /* rounded-full */
+  transition: .2s;
+  cursor: pointer;
+}
+
+@media (any-hover: hover) {
+  .tag-navigation__button:hover {
+    background: #bfdbfe; /* hover:bg-blue-200 */
+  }
+}

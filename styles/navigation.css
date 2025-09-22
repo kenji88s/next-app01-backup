@@ -1,0 +1,113 @@
+.navigation {
+  align-self: stretch;
+  display: flex;
+  width: 100%;
+  border-top: 1px solid #e3e3e3;
+}
+
+@media (min-width: 1024px) {
+  .navigation {
+    width: auto;
+    border: none;
+  }
+}
+
+.navigation__list {
+  width: 100%;
+  display: flex;
+}
+
+@media (min-width: 1024px) {
+  .navigation__list {
+    gap: 0 1.5rem;
+    align-items: center;
+  }
+}
+
+.navigation__item {
+  /* 各リストアイテムのスタイル（必要に応じて） */
+  flex: 1;
+}
+
+@media (min-width: 1024px) {
+  .navigation__item {
+    flex: unset;
+    display: flex;
+  }
+}
+
+.navigation__item:nth-child(2) {
+  border: solid #e3e3e3;
+  border-width: 0 1px;
+}
+
+@media (min-width: 1024px) {
+  .navigation__item:nth-child(2) {
+    border: none;
+  }
+}
+
+.navigation__link {
+  align-items: center;
+  display: flex;
+  min-height: 4rem;
+}
+
+@media (min-width: 480px) {
+  .navigation__link {
+    justify-content: center;
+    padding-right: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .navigation__link {
+    padding-left: 1rem;
+  }
+}
+
+.navigation__label {
+  font-size: 1.4rem;
+  letter-spacing: 0;
+  display: none;
+}
+
+@media (min-width: 480px) {
+  .navigation__label {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  .navigation__label {
+    letter-spacing: 0.5px;
+  }
+}
+
+.navigation__icon {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+@media (min-width: 480px) {
+  .navigation__icon {
+    margin-inline: 0;
+  }
+}
+
+.navigation__icon svg {
+  stroke: #93c5fd;
+  transition: .5s;
+}
+
+@media (any-hover: hover) {
+  .navigation__link:hover .navigation__icon svg {
+    stroke: #1d4ed8;
+  }
+}
