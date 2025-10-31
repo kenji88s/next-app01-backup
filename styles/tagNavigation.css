@@ -1,0 +1,57 @@
+.tag-navigation {
+  padding-block: 1.5rem;
+  overflow: hidden;
+  margin-inline: 1rem;
+}
+
+@media (min-width: 1201px) {
+  .tag-navigation {
+    padding-inline: 2rem;
+  }
+}
+
+@media (min-width: 1401px) {
+  .tag-navigation {
+    padding-inline: 5rem;
+  }
+}
+
+@media (min-width: 2560px) {
+  .tag-navigation {
+    padding-inline: 8rem;
+  }
+}
+
+.tag-navigation__inner {
+  white-space: nowrap;
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+.tag-navigation__inner::-webkit-scrollbar {
+  display: none;
+}
+
+.tag-navigation__list {
+  display: flex;
+  gap: 0 1rem; 
+}
+
+.tag-navigation__button {
+  background: #f3f4f6;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  transition: .2s;
+  cursor: pointer;
+}
+
+@media (any-hover: hover) {
+  .tag-navigation__button:hover {
+    background: #bfdbfe;
+  }
+}

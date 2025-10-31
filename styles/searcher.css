@@ -1,0 +1,87 @@
+.searcher {
+  flex: 1;
+  padding: 1.5rem 1rem;
+}
+
+@media (min-width: 480px) {
+  .searcher {
+    padding-inline: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .searcher {
+    padding: 1rem 3rem 1rem 1rem;
+  }
+}
+
+@media (min-width: 1201px) {
+  .searcher {
+    padding-inline: 3rem 10rem;
+  }
+}
+
+.searcher__inner {
+  width: 100%;
+  position: relative;
+}
+
+.searcher__form {
+  border: 1px solid #ccc;
+  border-radius: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: inset 0 0.2rem 0.8rem rgba(0, 0, 0, 0.2);
+  background: #f1f1f1;
+  overflow: hidden;
+}
+
+.searcher__input {
+  flex: 1;
+  min-height: 100%;
+  width: 100%;
+  padding: 0.7rem 1rem 0.75rem;
+  font-size: 1.45rem;
+  line-height: 1;
+  order: 2;
+}
+
+@media (min-width: 480px) {
+  .searcher__input {
+    padding: 1rem 2rem 1rem 1.5rem;
+  }
+}
+
+.searcher__input:focus,
+.searcher__input:focus + .searcher__icon,
+.searcher__input:focus ~ .searcher__reset-wrapper {
+  background:  #bfdbfeb0;
+}
+
+.searcher__icon {
+  width: 3.5rem;
+  padding-left: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  order: 1;
+}
+
+@media (min-width: 768px) {
+  .searcher__icon {
+    width: 4rem;
+  }
+}
+
+.searcher__icon svg {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.searcher__reset-wrapper {
+  display: flex;
+  align-items: center;
+  padding-right: 1rem;
+  order: 3;
+  min-height: 100%;
+}

@@ -1,0 +1,137 @@
+.tag-controls {
+  padding: 3rem 1.5rem 2rem;
+  background: rgba(39,39,39,0.85);
+  border: 1px solid #4f4f4f;
+  border-radius: 0.3rem;
+  position: absolute;
+  right: 1rem;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  overflow: hidden;
+  max-height: calc(100% - 13rem);
+}
+
+@media (min-width: 480px) {
+  .tag-controls {
+    min-width: 25rem;
+    max-width: 35rem;
+    bottom: 6.5rem;
+    left: unset;
+    right: 1.5rem;
+    top: unset;
+    transform: unset;
+  }
+}
+
+
+.tag-controls {
+  transition: 0.5s;
+  opacity: 0;
+  transform: translateY(50%);
+}
+
+.tag-controls[data-state="fade-in"] {
+  transition: 0.3s cubic-bezier(0.08, 0.82, 0.42, 1.11);
+  transform: translateY(-50%);
+  opacity: 1;
+}
+
+@media (min-width: 480px) {
+  .tag-controls {
+    transform: scale(0);
+    transform-origin: right bottom;
+  }
+
+  .tag-controls[data-state="fade-in"] {
+    transform: scale(1);
+  }
+}
+
+.tag-controls__content {
+  gap: 0 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.tag-controls__content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  flex: 1;
+}
+
+.tag-controls__content[data-state="hidden"] {
+  display: none;
+}
+
+.image-tags {
+  flex: 1;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  overflow-y: scroll;
+  color: #fff;
+}
+
+.image-tags__button {
+  padding: 0.2rem;
+  cursor: pointer;
+  text-align: left;
+  color: #fff;
+}
+
+.tag-editor {
+  flex: 1;
+  margin:0 -0.5rem;
+}
+
+.tag-editor__textarea {
+  background: none;
+  border: 1px dashed #797979;
+  border-radius: 0.3rem;
+  display: block;
+  min-height: 20rem;
+  padding: 1.5rem;
+  color: #fff;
+  margin-bottom:2rem;
+  font-size: 1.45rem;
+  width: 100%;
+}
+
+@media (min-width: 480px) {
+  .tag-editor__textarea {
+    width: 30rem;
+  }
+}
+
+
+
+.tag-editor__button-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 0 2rem;
+}
+
+.tag-editor .tag-editor__button {
+  margin: 0;
+}
+
+.tag-controls .tag-controls__edit-button,
+.tag-editor .tag-editor__button {
+  color: #fff;
+  background: #3a3a3a;
+  border: 1px solid #797979;
+}
+
+
+@media (any-hover: hover) {
+  .tag-controls .tag-controls__edit-button:hover,
+  .tag-editor .tag-editor__button:hover {
+     background: #1d4ed8;
+  }
+}

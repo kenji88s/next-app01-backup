@@ -1,0 +1,37 @@
+.gallery-controls {
+  padding-block: 2.4rem;
+  color: #4b5563;
+}
+
+@media (min-width: 1200px) {
+  .gallery-controls {
+    padding-block: 3.2rem;
+  }
+}
+
+.gallery-controls__tag-info {
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 0.8rem;
+}
+
+@media (min-width: 768px) {
+  .gallery-controls__tag-info {
+    font-size: inherit;
+  }
+}
+
+.gallery-controls__tag-info:not(:last-child) {
+  margin-bottom: 1.8rem;
+}
+
+.gallery-controls__tag-value {
+  font-weight: bold;
+  color: #2563eb;
+}
+
+.gallery-controls__load-button {
+  margin: 0 auto;
+}

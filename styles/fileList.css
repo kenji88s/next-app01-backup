@@ -1,0 +1,68 @@
+.file-list {
+  overflow-y: auto;
+  height: 20rem;
+  padding-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .file-list {
+    border-radius: 0.375rem;
+    border: 1px solid #ccc;
+    height: 25rem;
+  }
+}
+
+.file-list:last-child {
+  height: 100%;
+}
+
+.file-list__item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 1.5rem 0.5rem 0.5rem;
+  border-radius: 0.375rem;
+  background: #ffffff;
+  border-bottom: 1px solid #ccc;
+}
+
+.file-list__thumb {
+  width: 4.5rem;
+  height: 4.5rem;
+  object-fit: cover; 
+  border-radius: 0.25rem;
+}
+
+.file-list__name {
+  font-size: 1.3rem;
+  letter-spacing: 0;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.file-list__status {
+  font-size: 0.875rem;
+  width: 8.8rem;
+  letter-spacing: 1px;
+}
+
+.file-list__status.uploading {
+  color: #3b82f6;
+}
+
+.file-list__status.uploaded {
+  color: #10b981;
+}
+
+.file-list__status.failed {
+  color: #ef4444;
+}
+
+.file-list__remove-btn {
+  color: #ef4444;
+  cursor: pointer;
+  font-size: 1.6rem;
+  align-self: stretch;
+}

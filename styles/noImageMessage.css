@@ -1,0 +1,39 @@
+.no-image-message {
+  display: table;
+  margin-inline: auto;
+  margin-block: 2rem;
+  text-align: center;
+}
+
+@media (min-width: 769px) {
+  .no-image-message {
+    margin-block: 3.2rem;
+  }
+}
+
+@media (min-width: 1201px) {
+  .no-image-message {
+    margin-block: 4rem;
+  }
+}
+
+@media (min-width: 2560px) {
+  .no-image-message {
+    margin-block: 6.4rem;
+  }
+}
+
+.no-image-message__icon {
+  overflow: hidden;
+  margin: 0 auto 3rem;
+  display: flex;
+  align-items: center;
+  width: 6rem;
+  height: 6rem;
+  margin-bottom: 2rem;
+}
+
+.no-image-message__icon svg {
+  stroke:#595959;
+  width: 100%;
+}
